@@ -18,9 +18,7 @@ switch (NODE_ENV) {
     break;
   default: throw new Error('Invalid database url');
 }
-console.log(connectionString);
 const connection = new Pool({
   connectionString, ssl,
 });
-console.log(connection.connectionString);
 module.exports = connection;

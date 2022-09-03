@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CA-G12/Zayan-Reddit#readme",
   "devDependencies": {
+    "@jest/globals": "^29.0.2",
     "eslint": "^8.23.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",

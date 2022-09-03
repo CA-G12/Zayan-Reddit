@@ -1,0 +1,4 @@
+PRODUCTION_DATABASE_URL = add the url of your production database
+DEVELOPMENT_DATABASE_URL = add the url of your development database
+TESTING_DATABASE_URL = add the url of your testing database
+SECRET_KEY = add a secret key

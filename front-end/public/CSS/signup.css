@@ -81,7 +81,7 @@ body img {
   border-color: var(--secondary-color);
 }
 .requirment.success input {
-  border-color: #2ecc71;
+  border-color: var(--forth-color);
 }
 
 .requirment.error input {
@@ -95,7 +95,7 @@ body img {
 }
 
 .requirment.success i.fa-circle-check {
-  color: #2ecc71;
+  color: var(--forth-color);
   visibility: visible;
 }
 
@@ -112,8 +112,8 @@ body img {
   position: absolute;
   left: 2px;
   margin: 0;
-  padding: 0;
-  font-style: italic;
+  padding-bottom: 0;
+  /* font-style: italic; */
 }
 
 .requirment.error h6 {
@@ -129,7 +129,7 @@ body img {
   font-size: 20px;
   font-weight: bold;
   padding: 5px 20px;
-  margin-top: 0px;
+  margin-top: 4px;
   width: 100%;
 }
 

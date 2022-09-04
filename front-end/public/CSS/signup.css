@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+:root {
+  --main-color: #fffffe;
+  --secondary-color: #004643;
+  --third-color: #ff4500;
+  --forth-color: #14d8c3;
+  --fifth-color: #e8e4e6;
+}
+body {
+  background-color: var(--main-color);
+  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-family: "Open Sans", sans-serif;
+}
+body .image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+body img {
+  width: 80%;
+}
+.title {
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--forth-color);
+  text-align: center;
+}
+.title .red {
+  color: var(--third-color);
+}
+.container {
+  background-color: var(--fifth-color);
+  border-radius: 5px;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.096);
+  width: 80vh;
+  top: 0;
+  margin: 0 20px 0 40px;
+}
+
+form {
+  padding: 20px 30px;
+}
+.requirment {
+  margin-bottom: 5px;
+  padding-bottom: 25px;
+  position: relative;
+}
+
+.requirment label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.star {
+  color: var(--third-color);
+}
+
+.requirment input {
+  border: 2px solid var(--forth-color);
+  border-radius: 4px;
+  display: block;
+  font-size: 16px;
+  padding: 5px 10px;
+  width: 100%;
+  color: var(--secondary-color);
+}
+
+.requirment input:focus {
+  outline: 0;
+  border-color: var(--secondary-color);
+}
+.requirment.success input {
+  border-color: #2ecc71;
+}
+
+.requirment.error input {
+  border-color: var(--third-color);
+}
+.requirment i {
+  visibility: hidden;
+  position: absolute;
+  top: 55px;
+  right: 20px;
+}
+
+.requirment.success i.fa-circle-check {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.requirment.error i.fa-circle-exclamation {
+  color: var(--third-color);
+  visibility: visible;
+}
+
+.requirment h6 {
+  visibility: hidden;
+  color: var(--third-color);
+  font-size: large;
+  font-weight: 600;
+  position: absolute;
+  left: 2px;
+  margin: 0;
+  padding: 0;
+  font-style: italic;
+}
+
+.requirment.error h6 {
+  visibility: visible;
+}
+
+form button {
+  border-radius: 4px;
+  background-color: var(--third-color);
+  border: 0;
+  box-shadow: 0 16px 15px -25px var(--secondary-color);
+  color: var(--main-color);
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 20px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+form button:hover {
+  scale: 1.06;
+}

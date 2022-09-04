@@ -107,7 +107,7 @@ body img {
 .requirment h6 {
   visibility: hidden;
   color: var(--third-color);
-  font-size: large;
+  font-size: medium;
   font-weight: 600;
   position: absolute;
   left: 2px;

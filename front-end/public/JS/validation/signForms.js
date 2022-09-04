@@ -28,7 +28,7 @@ const signFormsValidation = () => {
     } else if (!validatePassword(passwordVal.value)) {
       handleError(
         password,
-        'Must contain at least a digit,an uppercase,a lowercase letter,and 6 charctars',
+        '6 charctars at least a digit,an uppercase,a lowercase letter',
       );
     } else {
       succeed(password);

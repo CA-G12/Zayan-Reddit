@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="CSS/signup.css" />
+    <title>Zayan Reddit</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  </head>
+  <body>
+    <section class="image">
+      <img src="assets/picture2.png" alt="avatar" class="pic" />
+    </section>
+    <section class="container">
+      <h1 class="title">Hello again!</h1>
+      <form action="/" id="form" novalidate>
+        <!--start email-->
+        <div class="requirment">
+          <label class="label">Email address<span class="star">*</span></label>
+          <input type="email" placeholder="example@email.com" id="email" />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <h6>error</h6>
+        </div>
+        <!--end email-->
+        <!--start password-->
+        <div class="requirment">
+          <label class="label">Password<span class="star">*</span></label>
+          <input type="password" placeholder="Example1234" id="password" />
+          <i class="fa-solid fa-circle-check"></i>
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <h6>error</h6>
+        </div>
+        <!--end password-->
+        <button>Sign in</button>
+      </form>
+    </section>
+  </body>
+</html>

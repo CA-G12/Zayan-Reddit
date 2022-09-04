@@ -46,7 +46,7 @@ body img {
   margin: 0 20px 0 40px;
 }
 
-form {
+#form {
   padding: 20px 30px;
 }
 .requirment {
@@ -120,7 +120,7 @@ form {
   visibility: visible;
 }
 
-form button {
+#form button {
   border-radius: 4px;
   background-color: var(--third-color);
   border: 0;
@@ -133,6 +133,6 @@ form button {
   width: 100%;
 }
 
-form button:hover {
+#form button:hover {
   scale: 1.06;
 }

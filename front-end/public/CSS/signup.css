@@ -46,7 +46,7 @@ body img {
   margin: 0 20px 0 40px;
 }
 
-form {
+#form {
   padding: 20px 30px;
 }
 .requirment {
@@ -81,7 +81,7 @@ form {
   border-color: var(--secondary-color);
 }
 .requirment.success input {
-  border-color: #2ecc71;
+  border-color: var(--forth-color);
 }
 
 .requirment.error input {
@@ -95,7 +95,7 @@ form {
 }
 
 .requirment.success i.fa-circle-check {
-  color: #2ecc71;
+  color: var(--forth-color);
   visibility: visible;
 }
 
@@ -112,15 +112,15 @@ form {
   position: absolute;
   left: 2px;
   margin: 0;
-  padding: 0;
-  font-style: italic;
+  padding-bottom: 0;
+  /* font-style: italic; */
 }
 
 .requirment.error h6 {
   visibility: visible;
 }
 
-form button {
+#form button {
   border-radius: 4px;
   background-color: var(--third-color);
   border: 0;
@@ -129,10 +129,10 @@ form button {
   font-size: 20px;
   font-weight: bold;
   padding: 5px 20px;
-  margin-top: 0px;
+  margin-top: 4px;
   width: 100%;
 }
 
-form button:hover {
+#form button:hover {
   scale: 1.06;
 }

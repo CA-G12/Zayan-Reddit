@@ -44,8 +44,8 @@ h6 {
 }
 :root {
   --primary-color: #004643;
-  --secondary-color: #91ccbb;
-  --btn2-color: #ff0000;
+  --secondary-color: #14d8c3;
+  --btn2-color: #ff4500;
   --third-color: #fffffe;
   --forth-color: #e8e4e6;
   --btn-color: #f9bc60;
@@ -130,6 +130,10 @@ nav .logo .name {
   transition: 0.3s;
   animation: bouncing 1.3s infinite;
 }
+.signIn:hover,
+.signUp:hover {
+  scale: 1.08;
+}
 @keyframes bouncing {
   0%,
   10%,
@@ -151,12 +155,12 @@ nav .logo .name {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1%;
+  /* padding: 0.5%; */
   margin-top: 10vh;
 }
 .post {
   background-color: var(--third-color);
-  padding: 2% 3%;
+  padding: 1.5% 2%;
   border-radius: 5px;
   width: 50%;
   margin: 1% 0;
@@ -206,4 +210,7 @@ nav .logo .name {
 }
 .comments:hover {
   background-color: var(--forth-color);
+  cursor: pointer;
+  scale: 1.05;
+
 }

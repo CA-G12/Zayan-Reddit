@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap");
+/* Start preset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  background-color: var(--main);
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--forth-color);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+:root {
+  --primary-color: #004643;
+  --secondary-color: #91ccbb;
+  --btn2-color: #ff0000;
+  --third-color: #fffffe;
+  --forth-color: #e8e4e6;
+  --btn-color: #f9bc60;
+}
+/* End preset */
+header {
+  background-color: var(--third-color);
+  position: fixed;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.151);
+  width: 100%;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6% 1%;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20%;
+}
+nav .logo .name {
+  color: var(--primary-color);
+}
+.red {
+  color: var(--btn2-color);
+}
+.logo i {
+  margin-left: 20px;
+  padding-right: 10px;
+  color: var(--secondary-color);
+}
+.searchBar {
+  width: 50%;
+  display: flex;
+}
+
+.searchTerm {
+  width: 50%;
+  border: 2px solid var(--secondary-color);
+  border-right: none;
+  padding: 0.8%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.searchTerm:focus {
+  color: var(--primary-color);
+}
+
+.searchButton {
+  padding: 0.5% 1%;
+  border: 1px solid var(--secondary-color);
+  background: var(--secondary-color);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+/* .btns {
+  display: flex;
+} */
+.signUp,
+.signIn {
+  border: 2px solid var(--btn2-color);
+  border-radius: 25px;
+  margin-right: 20px;
+  padding: 0.5% 1%;
+  cursor: pointer;
+}
+.signIn {
+  color: var(--btn2-color);
+  background-color: transparent;
+}
+.signUp {
+  background-color: var(--btn2-color);
+  color: var(--third-color);
+  transform: translateX(-50%);
+  transition: 0.3s;
+  animation: bouncing 1.3s infinite;
+}
+@keyframes bouncing {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40%,
+  60% {
+    transform: translateX(-5px);
+  }
+}
+
+.postsSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  margin-top: 10vh;
+}
+.post {
+  background-color: var(--third-color);
+  padding: 2% 3%;
+  border-radius: 5px;
+  width: 50%;
+  margin: 1% 0;
+  display: flex;
+  flex-direction: column;
+}
+.post .userData {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.post .userData .avatar {
+  width: 50px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.post .userData .userData2 {
+  color: var(--primary-color);
+}
+.post .userData .userData2 .timeAdded {
+  margin-top: -5px;
+  color: var(--secondary-color);
+}
+.post .content {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+.post .image {
+  border: 1px solid whitesmoke;
+  margin-bottom: 10px;
+  align-self: center;
+}
+.post .comments {
+  width: fit-content;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--btn2-color);
+  color: var(--btn2-color);
+  border: 0;
+}
+.post .comments i {
+  padding-right: 5px;
+  color: var(--btn2-color);
+}
+.comments:hover {
+  background-color: var(--forth-color);
+}

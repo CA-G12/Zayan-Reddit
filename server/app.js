@@ -7,6 +7,6 @@ app.set('port', process.env.PORT || 8000);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(compression());
-app.use(express.static(join(__dirname, 'front-end/public')));
+app.use(express.static(join(__dirname, '..', 'front-end', 'public')));
 
 module.exports = app;

@@ -2,19 +2,19 @@
 /* eslint-disable no-undef */
 signUpBtn.addEventListener('click', () => {
   if (signFormsValidation()) {
-    signUpPost();
+    signUpPostReq();
   }
 });
 
 password2.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
     if (signFormsValidation()) {
-      signUpPost();
+      signUpPostReq();
     }
   }
 });
 
-const signUpPost = () => {
+const signUpPostReq = () => {
   fetch('/signup', {
     method: 'POST',
     headers: {
@@ -28,8 +28,24 @@ const signUpPost = () => {
     }),
   })
     .then((res) => res.json())
-    // to do later
-    // .then((res) => {
-    // })
-    .catch((error) => console.log(error));
+    .then((res) => {
+      if (res.error) {
+        Swal.fire({
+          title: res.error,
+          text: '',
+          icon: 'warning',
+          confirmButtonText: 'OK',
+        });
+      } else {
+        window.location.assign('/');
+      }
+    })
+    .catch((error) => {
+      Swal.fire({
+        title: 'Error!',
+        text: error,
+        icon: 'error',
+        confirmButtonText: 'OK',
+      });
+    });
 };

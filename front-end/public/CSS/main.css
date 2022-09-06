@@ -108,18 +108,31 @@ nav .logo .name {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
-/* .btns {
+.btns {
   display: flex;
-} */
-.addPost, .user{
+  align-items: center;
+}
+.addPost,
+.user {
   display: none;
   background-color: transparent;
   border: 0;
   color: var(--primary-color);
+  text-align: center;
+  cursor: pointer;
+}
+.items {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+}
+.headerAvatar {
+  width: 40px;
+  height: 30px;
 }
 .signUp,
-.signIn
-{
+.signIn {
   border: 2px solid var(--btn2-color);
   border-radius: 25px;
   margin-right: 0px;
@@ -128,10 +141,15 @@ nav .logo .name {
   width: 14%;
 }
 
-.addPost, .signIn{
+.addPost,
+.signIn {
   margin-right: 10px;
 }
-.fa-plus , .fa-user{
+.fa-plus,
+.headerAvatar,
+.fa-user,
+.fa-right-from-bracket,
+.username {
   padding-right: 5px;
 }
 .signIn {
@@ -165,6 +183,52 @@ nav .logo .name {
   }
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  margin-top: 1px;
+  margin-left: 10px;
+
+  color: var(--primary-color);
+  display: none;
+  position: absolute;
+  width: 100%;
+  /* min-width: 140px; */
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content button {
+  background-color: var(--third-color);
+  width: 100%;
+  text-align: left;
+  border: 0;
+  color: var(--primary-color);
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content button:hover,
+.addPost:hover {
+  color: var(--btn2-color);
+}
+.addPost:hover,
+.user:hover {
+  scale: 1.07;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover . {background-color: #3e8e41;} */
 .postsSection {
   display: flex;
   flex-direction: column;
@@ -223,7 +287,7 @@ nav .logo .name {
   padding-right: 5px;
   color: var(--btn2-color);
 }
-.comments:hover, .addPost:hover, .user:hover {
+.comments:hover {
   background-color: var(--forth-color);
   cursor: pointer;
   scale: 1.05;

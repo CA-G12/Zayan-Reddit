@@ -8,14 +8,17 @@ const searchBtn = document.querySelector('.searchButton');
 const searchTerm = document.querySelector('.searchTerm');
 const comments = document.querySelector('.comments');
 const logoutBtn = document.querySelector('.logout');
+const headerAvatar = document.querySelector('.headerAvatar');
 
 fetch('/main')
   .then((res) => res.json())
   .then((res) => {
+    console.log(res);
     if (res.istoken) {
       addPost.style.display = 'block';
       user.style.display = 'block';
       username.textContent = res.username;
+      headerAvatar.src = res.avatar;
       signInBtn.style.display = 'none';
       signUpBtn.style.display = 'none';
     }

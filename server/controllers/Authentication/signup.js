@@ -10,7 +10,7 @@ const signup = (req, res, next) => {
       if (result.rows.length) { throw new CustomizedServerErrors(401, 'Email Already Exists!'); }
     }).then(() => hashPassword(password))
     .then((hashedPassword) => addUserQuery({ email, username, hashedPassword }))
-    .then((userData) => signJWT({ id: userData.id, username }))
+    .then((userData) => signJWT({ id: userData.id, username, avatar: userData.avatar }))
     .then((token) => res.cookie('token', token).json(token))
     .catch((err) => {
       if (err.details) {

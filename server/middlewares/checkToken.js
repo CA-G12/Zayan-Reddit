@@ -11,7 +11,7 @@ const checkToken = (req, res, next) => {
     verifyJWT(token)
       .then((decoded) => {
         req.token = decoded;
-        res.json({ istoken: true, username: req.token.username});
+        res.json({ istoken: true, username: req.token.username, avatar: req.token.avatar });
       })
       .catch((err) => next(err));
   }

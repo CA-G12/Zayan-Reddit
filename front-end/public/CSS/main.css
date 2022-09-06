@@ -111,13 +111,28 @@ nav .logo .name {
 /* .btns {
   display: flex;
 } */
+.addPost, .user{
+  display: none;
+  background-color: transparent;
+  border: 0;
+  color: var(--primary-color);
+}
 .signUp,
-.signIn {
+.signIn
+{
   border: 2px solid var(--btn2-color);
   border-radius: 25px;
-  margin-right: 20px;
+  margin-right: 0px;
   padding: 0.5% 1%;
   cursor: pointer;
+  width: 14%;
+}
+
+.addPost, .signIn{
+  margin-right: 10px;
+}
+.fa-plus , .fa-user{
+  padding-right: 5px;
 }
 .signIn {
   color: var(--btn2-color);
@@ -208,9 +223,8 @@ nav .logo .name {
   padding-right: 5px;
   color: var(--btn2-color);
 }
-.comments:hover {
+.comments:hover, .addPost:hover, .user:hover {
   background-color: var(--forth-color);
   cursor: pointer;
   scale: 1.05;
-
 }

@@ -34,9 +34,26 @@
         </div>
         <button class="signIn">Sign in</button>
         <button class="signUp">Sign up</button>
-        <button class="addPost"><i class="fa-solid fa-plus"></i>Add post</button>
-        <button class="user"><i class="fa-solid fa-user"></i></i><span class="username">Me</span></button>
-        <!-- <button class="toggleBtn"><i class="fa-solid fa-bars fa-3x"></i></button> -->
+        <button class="addPost">
+          <i class="fa-solid fa-plus"></i>Add post
+        </button>
+        <div class="dropdown">
+          <button class="user">
+            <div class="items">
+              <img src="assets/reddit2.png" alt="avatar" class="headerAvatar" />
+              <span class="username">Me</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </button>
+          <div class="dropdown-content">
+            <button class="viewProfile">
+              <i class="fa-solid fa-user"></i>View profile
+            </button>
+            <button class="logout">
+              <i class="fa-solid fa-right-from-bracket"></i>Logout
+            </button>
+          </div>
+        </div>
       </nav>
     </header>
     <section class="postsSection">
@@ -99,7 +116,7 @@
     </section>
     <script src="JS/search.js"></script>
     <script src="JS/viewPostPage.js"></script>
+    <script src="JS/logout.js"></script>
     <script src="JS/main.js"></script>
-
   </body>
 </html>

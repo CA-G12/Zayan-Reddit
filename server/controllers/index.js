@@ -1,4 +1,3 @@
-const { signup, signin } = require('./Authentication');
+const { signup, signin, logout } = require('./Authentication');
 
-module.exports = { signup, signin };
-
+module.exports = { signup, signin, logout };

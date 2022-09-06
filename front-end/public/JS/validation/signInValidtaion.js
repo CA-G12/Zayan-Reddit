@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
 signInBtn.addEventListener('click', () => {
   if (signFormsValidation()) {
@@ -7,7 +8,6 @@ signInBtn.addEventListener('click', () => {
 
 password.addEventListener('keypress', (e) => {
   if (e.key === 'Enter') {
-    console.log('sign in enterrrr');
     if (signFormsValidation()) {
       signInPostReq();
     }

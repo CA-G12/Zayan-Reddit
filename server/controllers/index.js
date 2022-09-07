@@ -1,6 +1,6 @@
 const { signup, signin, logout } = require('./Authentication');
-const { addPost } = require('./posts');
+const { addPost, viewPost , createPostPage} = require('./posts');
 
 module.exports = {
-  signup, signin, logout, addPost,
+  signup, signin, logout, addPost, viewPost, createPostPage
 };

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
@@ -35,7 +36,7 @@
         <button class="signIn">Sign in</button>
         <button class="signUp">Sign up</button>
         <button class="addPost">
-          <i class="fa-solid fa-plus"></i>Add post
+          <i class="fa-solid fa-plus"></i>Create post
         </button>
         <div class="dropdown">
           <button class="user">
@@ -56,6 +57,14 @@
         </div>
       </nav>
     </header>
+    <section class="container">
+      <div class="createPostSectionHome">
+        <!-- <h2 class="title">Create a post</h2> -->
+        <!-- <div class="postControl"> -->
+          <img src="assets/reddit2.png" alt="logo" class="avatar" id = "createPostAvatar"/>
+          <input type="text" class = 'homeInput' placeholder="Create a post">
+          <i class="fa-solid fa-image fa-2x"></i>        
+    </section>
     <section class="postsSection">
       <div class="post">
         <div class="userData">
@@ -117,6 +126,7 @@
     <script src="JS/search.js"></script>
     <script src="JS/viewPostPage.js"></script>
     <script src="JS/logout.js"></script>
-    <script src="JS/main.js"></script>
+    <script src="JS/header.js"></script>
+    <script src="JS/addPost.js"></script>
   </body>
 </html>

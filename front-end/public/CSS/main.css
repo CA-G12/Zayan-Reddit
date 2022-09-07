@@ -49,6 +49,7 @@ h6 {
   --third-color: #fffffe;
   --forth-color: #e8e4e6;
   --btn-color: #f9bc60;
+  --cream-color: #fffdd0;
 }
 /* End preset */
 header {
@@ -69,6 +70,9 @@ nav .logo {
   display: flex;
   align-items: center;
   margin-right: 20%;
+}
+.logo:hover {
+  cursor: pointer;
 }
 nav .logo .name {
   color: var(--primary-color);
@@ -215,13 +219,38 @@ nav .logo .name {
 .dropdown:hover .dropdown-btns {
   display: block;
 }
+.createPostSectionHome {
+  margin-top: 10vh;
+  display: flex;
+  background-color: var(--third-color);
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding: 1% 2%;
+  border-radius: 5px;
+}
+.createPostSectionHome input {
+  width: 100%;
+  margin-right: 10px;
+  border: 1px solid var(--forth-color);
+  background-color: var(--forth-color);
+  border-radius: 5px;
+  padding: 5px 12px;
+  color: var(--primary-color);
+}
+.createPostSectionHome i{
+  color:#c0babd;
+  cursor: pointer;
+}
+.createPostSectionHome i:hover{
+  scale: 1.05;
+}
 .postsSection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0.5%; */
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
 }
 .post {
   background-color: var(--third-color);
@@ -237,7 +266,8 @@ nav .logo .name {
   align-items: center;
   margin-bottom: 10px;
 }
-.post .userData .avatar {
+.post .userData .avatar,
+.createPostSectionHome .avatar {
   width: 50px;
   height: 45px;
   border-radius: 50%;
@@ -277,4 +307,90 @@ nav .logo .name {
   background-color: var(--forth-color);
   cursor: pointer;
   scale: 1.05;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.createPostSection {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 90px;
+  margin-top: 12vh;
+  padding: 1% 2%;
+  background-color: var(--third-color);
+  border-radius: 5px;
+}
+.createPostSection .title {
+  border-bottom: 1px solid var(--third-color);
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.createPostSection .postControl {
+  background-color: var(--third-color);
+}
+.createPostSection .options {
+  display: flex;
+  background-color: var(--third-color);
+  width: 100%;
+  margin-bottom: 5px;
+}
+.options button {
+  width: 50%;
+  background-color: transparent;
+  border: 1px solid var(--forth-color);
+  padding: 7px 0;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+.options .textContentBtn {
+  color: var(--btn2-color);
+  background-color: var(--cream-color);
+  border-color: var(--btn2-color);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-right: 5px;
+}
+.options .postImageBtn {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.options .postImageBtn:hover {
+  background-color: var(--cream-color);
+}
+.options .inputs {
+  margin-bottom: 5px;
+}
+#text,
+.imageURL {
+  width: 100%;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--forth-color);
+  color: var(--primary-color);
+}
+.imageURL {
+  display: none;
+  margin-bottom: 5px;
+}
+#text:focus,
+.imageURL:focus, .createPostSectionHome input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+.postBtn {
+  width: 100%;
+  border-radius: 5px;
+  padding: 7px 0;
+  cursor: pointer;
+  border: 0;
+  background-color: var(--btn2-color);
+  color: var(--third-color);
+}
+.postBtn:hover {
+  scale: 1.01;
 }

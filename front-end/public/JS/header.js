@@ -11,6 +11,10 @@ const logoutBtn = document.querySelector('.logout');
 const headerAvatar = document.querySelector('.headerAvatar');
 const logo = document.querySelector('.logo');
 const createPostAvatar = document.querySelector('#createPostAvatar');
+const createPostSectionHome = document.querySelector('.createPostSectionHome');
+const imageIcon = document.querySelector('.fa-image');
+const homeInput = document.querySelector('.homeInput');
+const postsSection = document.querySelector('.postsSection');
 
 let userAvatar;
 fetch('/main')
@@ -23,6 +27,10 @@ fetch('/main')
       username.textContent = res.username;
       userAvatar = res.avatar;
       headerAvatar.src = userAvatar;
+      if (createPostSectionHome) {
+        createPostSectionHome.style.display = 'flex';
+        postsSection.style.marginTop = 0;
+      }
       if (createPostAvatar) {
         createPostAvatar.src = userAvatar;
       }
@@ -36,5 +44,11 @@ signUpBtn.addEventListener('click', () => window.location.assign('/signup.html')
 searchBtn.addEventListener('click', () => handleSearch(searchTerm.value.trim()));
 // comments.addEventListener('click', () => viewPostPage());
 logoutBtn.addEventListener('click', () => logout());
-createPost.addEventListener('click', () => window.location.assign('createPost.html'));
+createPost.addEventListener('click', () => window.location.href = '/createPost');
 logo.addEventListener('click', () => window.location.assign('/'));
+if (imageIcon) {
+  imageIcon.addEventListener('click', () => window.location.href = '/createPost');
+}
+if (homeInput) {
+  homeInput.addEventListener('focus', () => window.location.href = '/createPost');
+}

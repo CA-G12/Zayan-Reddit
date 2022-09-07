@@ -221,7 +221,7 @@ nav .logo .name {
 }
 .createPostSectionHome {
   margin-top: 10vh;
-  display: flex;
+  display: none;
   background-color: var(--third-color);
   justify-content: space-between;
   align-items: center;
@@ -250,7 +250,7 @@ nav .logo .name {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin-top: 10vh; */
+  margin-top: 10vh;
 }
 .post {
   background-color: var(--third-color);

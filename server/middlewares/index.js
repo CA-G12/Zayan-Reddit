@@ -1,2 +1,4 @@
 const checkToken = require('./checkToken');
-module.exports = {checkToken};
+const sendUserData = require('./sendUserData');
+
+module.exports = { checkToken, sendUserData };

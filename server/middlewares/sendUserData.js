@@ -1,4 +1,4 @@
-// this middleware is created to send data to the /main
+// this middleware is created to send data to the /isLogged
 // after checking that there is a verified token:
 // as the main page is for both signed and unsigened user and data in it changes based in this info
 const sendUserData = (req, res) => {

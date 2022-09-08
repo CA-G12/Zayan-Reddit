@@ -10,17 +10,21 @@ const renderPost = (postDataObj) => {
   userData.className = 'userData';
   const userAvatar = document.createElement('img');
   userAvatar.className = 'avatar';
+  userAvatar.setAttribute('userId', postDataObj.userid);
   userAvatar.src = postDataObj.avatar;
   userData.appendChild(userAvatar);
+  userAvatar.addEventListener('click', () => console.log(userAvatar.getAttribute('userId')));
   const userData2 = document.createElement('div');
   userData2.className = 'userData2';
   const name = document.createElement('h4');
   name.className = 'name';
+  name.setAttribute('userId', postDataObj.userid);
   name.textContent = postDataObj.username;
   const postTimeAdded = document.createElement('h5');
   postTimeAdded.className = 'timeAdded';
   postTimeAdded.textContent = postDataObj.timeadded;
   userData2.appendChild(name);
+  name.addEventListener('click', () => console.log(name.getAttribute('userId')));
   userData2.appendChild(postTimeAdded);
   userData.appendChild(userData2);
   post.appendChild(userData);
@@ -44,5 +48,8 @@ const renderPost = (postDataObj) => {
   comments.appendChild(commentIcon);
   comments.appendChild(commentsLabel);
   post.appendChild(comments);
+  comments.addEventListener('click', () => {
+    window.location.href = `/post/${postDataObj.id}/display`;
+  });
   postsSection.appendChild(post);
 };

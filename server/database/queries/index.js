@@ -1,4 +1,4 @@
 const { checkEmailExistance, addUserQuery } = require('./users');
-const {addPostQuery} = require('./posts');
+const {addPostQuery, getPostDataQuery, getAllPostsDataQuery} = require('./posts');
 
-module.exports = { checkEmailExistance, addUserQuery,addPostQuery };
+module.exports = { checkEmailExistance, addUserQuery,addPostQuery, getPostDataQuery , getAllPostsDataQuery};

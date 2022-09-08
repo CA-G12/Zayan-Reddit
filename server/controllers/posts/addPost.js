@@ -9,12 +9,12 @@ const { addPostQuery } = require('../../database/queries');
 const addPost = (req, res, next) => {
   console.log('in addPost router', req.body);
   const { content, image } = req.body;
-  const { id, username, avatar } = req.token;
+  const { id } = req.token;
   const userId = id;
   console.log('userId', userId);
   postValidation({ userId, content, image })
     .then(() => addPostQuery({ content, image, userId }))
-    .then((postData) => { req.postData = postData; next(); })
+    .then((postData) => res.json({ postId: postData.id }))
     .catch((err) => {
       if (err.details) {
         // console.log(err.details[0].message);

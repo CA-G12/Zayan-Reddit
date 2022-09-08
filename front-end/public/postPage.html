@@ -12,9 +12,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/main.css" />
     <title>Zayan Reddit</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
   <body>
     <header>
@@ -41,7 +41,11 @@
         <div class="dropdown">
           <button class="user">
             <div class="items">
-              <img src="assets/reddit2.png" alt="avatar" class="headerAvatar" />
+              <img
+                src="/assets/reddit2.png"
+                alt="avatar"
+                class="headerAvatar"
+              />
               <span class="username">Me</span>
               <i class="fa-solid fa-angle-down"></i>
             </div>
@@ -57,18 +61,28 @@
         </div>
       </nav>
     </header>
-    <section class="container">
-      <div class="createPostSectionHome">
-          <img src="assets/reddit2.png" alt="logo" class="avatar" id = "createPostAvatar"/>
-          <input type="text" class = 'homeInput' placeholder="Create a post">
-          <i class="fa-solid fa-image fa-2x"></i>        
+    <section class="postDetails">
+      <div class="post">
+        <div class="userData">
+          <img src="/assets/reddit2.png" alt="user avatar" class="avatar" />
+          <div class="userData2">
+            <h4 class="postUsername">Zayan</h4>
+            <h5 class="timeAdded">1 hour ago</h5>
+          </div>
+        </div>
+        <h3 class="content">helfhfhorihfoifhiorhforfgrgih</h3>
+        <img
+          src="https://images.pexels.com/photos/7442031/pexels-photo-7442031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="post-image"
+          class="image"
+        />
+        <h4 class="commentsLabel">Comments</h4>
+        <section class = "commentsSection"></section>
+      </div>
     </section>
-    <section class="postsSection">
-    
-    </section>
-    <script src="JS/search.js"></script>
-    <script src="JS/logout.js"></script>
-    <script src="JS/header.js"></script>
-    <script src="JS/main.js"></script>
+    <script src="/JS/search.js"></script>
+    <script src="/JS/logout.js"></script>
+    <script src="/JS/header.js"></script>
+    <script src="/JS/viewPostPage.js"></script>
   </body>
 </html>

@@ -1,7 +1,7 @@
-const { CustomizedServerErrors } = require('../../utils');
+const { join } = require('path');
 
-const viewPost = (req, res, next) => {
-  console.log('req.postData', req.postData);
+const viewPost = (req, res) => {
+  res.sendFile(join(__dirname, '..', '..', '..', 'front-end', 'public', 'postPage.html'));
 };
 
 module.exports = viewPost;

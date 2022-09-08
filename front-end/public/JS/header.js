@@ -17,7 +17,7 @@ const homeInput = document.querySelector('.homeInput');
 const postsSection = document.querySelector('.postsSection');
 
 let userAvatar;
-fetch('/main')
+fetch('/isLogged')
   .then((res) => res.json())
   .then((res) => {
     console.log(res);
@@ -44,11 +44,11 @@ signUpBtn.addEventListener('click', () => window.location.assign('/signup.html')
 searchBtn.addEventListener('click', () => handleSearch(searchTerm.value.trim()));
 // comments.addEventListener('click', () => viewPostPage());
 logoutBtn.addEventListener('click', () => logout());
-createPost.addEventListener('click', () => window.location.href = '/createPost');
+createPost.addEventListener('click', () => { window.location.href = '/createPost'; });
 logo.addEventListener('click', () => window.location.assign('/'));
 if (imageIcon) {
-  imageIcon.addEventListener('click', () => window.location.href = '/createPost');
+  imageIcon.addEventListener('click', () => { window.location.href = '/createPost'; });
 }
 if (homeInput) {
-  homeInput.addEventListener('focus', () => window.location.href = '/createPost');
+  homeInput.addEventListener('focus', () => { window.location.href = '/createPost'; });
 }

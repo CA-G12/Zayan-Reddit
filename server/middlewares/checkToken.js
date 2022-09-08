@@ -4,6 +4,7 @@ const checkToken = (req, res, next) => {
   console.log('in checkToken');
   console.log(req.cookies.token);
   if (!req.cookies.token) {
+    res.json({ istoken: false });
     console.log('no token');
     res.redirect('/');
     // res.json({ istoken: false });

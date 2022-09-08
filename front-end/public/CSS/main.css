@@ -44,7 +44,7 @@ h6 {
 }
 :root {
   --primary-color: #004643;
-  --secondary-color: #14d8c3;
+  --secondary-color: #ff4500;
   --btn2-color: #ff4500;
   --third-color: #fffffe;
   --forth-color: #e8e4e6;
@@ -268,19 +268,82 @@ nav .logo .name {
   align-items: center;
   margin-bottom: 10px;
 }
+.commentsHeader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.CommentInputDiv textarea{
+  width: 100%;
+  padding: 1% 2%;
+  border: 1px solid var(--forth-color);
+  border-radius: 3px;
+  color:var(--primary-color);
+}
+.CommentInputDiv textarea:focus{
+  outline: none;
+  border: 1.5px solid var(--primary-color);
+  
+}
+.addCommentBtn{
+  background-color: transparent;
+  /* border: 1px solid var(--btn2-color); */
+  border: 0;
+  border-radius: 3px;
+  color: var(--btn2-color);
+  /* padding: 0.5% 2%;  */
+}
+.addCommentBtn:hover{
+  background-color: var(--cream-color);
+  scale: 1.05;
+}
+.comment{
+  padding: 1%;
+  background-color: var(--cream-color);
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+.commentedBy{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.commentUserInfo{
+  display: flex;
+  align-items: center;
+}
+.commentAvatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
 .post .userData .avatar,
 .createPostSectionHome .avatar {
-  width: 50px;
+  width: 45px;
   height: 45px;
   border-radius: 50%;
   margin-right: 10px;
 }
-.post .userData .userData2 {
+.post .userData .userData2 , .commentUsername{
   color: var(--primary-color);
 }
 .post .userData .userData2 .timeAdded {
+  
   margin-top: -5px;
   color: var(--secondary-color);
+}
+.commentTime{
+  /* margin-left: 10px; */
+  color: var(--btn2-color);
+}
+.commentContent{
+  margin-top: 0;
+  margin-left: 40px;
+  color: var(--primary-color);
+}
+.post .name:hover, .post .avatar:hover, .postUsername:hover{
+  cursor: pointer;
 }
 .post .content {
   margin-left: 5px;
@@ -291,7 +354,7 @@ nav .logo .name {
   margin-bottom: 10px;
   align-self: center;
 }
-.post .comments {
+.post .comments, .commentsLabel {
   width: fit-content;
   border-radius: 3px;
   display: flex;

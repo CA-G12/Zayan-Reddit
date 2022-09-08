@@ -1,21 +1,33 @@
 const postText = document.querySelector('.text');
-const postImage = document.querySelector('.imageURL');
+const postImageInput = document.querySelector('.imageURL');
 const postBtn = document.querySelector('.postBtn');
-const imageIcon = document.querySelector('.fa-image');
-const homeInput = document.querySelector('.homeInput');
+const postImageBtn = document.querySelector('.postImageBtn');
+const textContentBtn = document.querySelector('.textContentBtn');
 
-console.log(postText, postImage, postBtn);
-if (imageIcon) {
-  imageIcon.addEventListener('click', () => window.location.assign('../../protected/createPost.html'));
-}
-if (homeInput) {
-  homeInput.addEventListener('focus', () => window.location.assign('../../protected/createPost.html'));
-}
+postImageBtn.addEventListener('click', () => {
+  postImageBtn.style.color = '#ff4500';
+  postImageBtn.style.borderColor = '#ff4500';
+  postImageBtn.style.backgroundColor = '#fffdd0';
+  textContentBtn.style.borderColor = '#e8e4e6';
+  textContentBtn.style.backgroundColor = 'transparent';
+  textContentBtn.style.color = '#004643';
+  postImageInput.style.display = 'block';
+});
+textContentBtn.addEventListener('click', () => {
+  textContentBtn.style.color = '#ff4500';
+  textContentBtn.style.borderColor = '#ff4500';
+  textContentBtn.style.backgroundColor = '#fffdd0';
+  postImageBtn.style.borderColor = '#e8e4e6';
+  postImageBtn.style.backgroundColor = 'transparent';
+  postImageBtn.style.color = '#004643';
+});
 if (postBtn) {
-  postBtn.addEventListener('click', () => addPost(postText.value, postImage.value));
+  // eslint-disable-next-line no-use-before-define
+  postBtn.addEventListener('click', () => addPost(postText.value, postImageInput.value));
 }
 const addPost = (content, image) => {
   if (!content) {
+    // eslint-disable-next-line no-undef
     Swal.fire({
       title: 'Attention!',
       text: "The text content field can't be empty",
@@ -32,11 +44,7 @@ const addPost = (content, image) => {
         content, image,
       }),
     }).then((res) => res.json())
-      .then(console.log)
+      .then((post) => { window.location.href = `/post/${post.postId}/display`; })
       .catch(console.log);
   }
 };
-
-const handleDOMnewPost = () =>{
-
-}

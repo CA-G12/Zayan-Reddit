@@ -1,12 +1,10 @@
 const { verifyJWT } = require('../utils');
 
 const checkToken = (req, res, next) => {
-  console.log('in checkToken');
-  console.log(req.cookies.token);
   if (!req.cookies.token) {
-    res.json({ istoken: false });
     console.log('no token');
-    res.redirect('/');
+    res.json({ istoken: false });
+    // res.redirect('/');
     // res.json({ istoken: false });
   } else {
     const { token } = req.cookies;

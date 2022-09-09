@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
 fetch('/posts').then((res) => res.json()).then((posts) => posts.reverse().forEach((postData) => renderPost(postData))).catch(console.error);
@@ -22,7 +23,7 @@ const renderPost = (postDataObj) => {
   name.textContent = postDataObj.username;
   const postTimeAdded = document.createElement('h5');
   postTimeAdded.className = 'timeAdded';
-  postTimeAdded.textContent = postDataObj.timeadded;
+  postTimeAdded.textContent = (new Date(postDataObj.timeadded)).toString().split('GMT')[0];
   userData2.appendChild(name);
   name.addEventListener('click', () => console.log(name.getAttribute('userId')));
   userData2.appendChild(postTimeAdded);

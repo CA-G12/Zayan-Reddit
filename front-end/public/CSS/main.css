@@ -311,6 +311,7 @@ nav .logo .name {
 .commentUserInfo{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .commentAvatar{
   width: 30px;

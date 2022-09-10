@@ -440,14 +440,38 @@ nav .logo .name {
   color: var(--primary-color);
 }
 .imageURL {
-  display: none;
+  width: 80%;
   margin-bottom: 5px;
+  margin-right: 10px;
+  height: max-content;
 }
 #text:focus,
 .imageURL:focus,
 .createPostSectionHome input:focus {
   outline: none;
   border-color: var(--primary-color);
+}
+.addImage{
+  display: none;
+  align-items: flex-start;
+
+}
+.addImage button{
+  border: none;
+  background-color: var(--forth-color);
+  color: var(--btn2-color);
+  padding:6px 7px;
+  border-radius: 5px;
+}
+.imagePreview{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.previewedImage{
+  width: max-content;
+  height: max-content;
+  text-align: center;
 }
 .postBtn {
   width: 100%;

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-use-before-define */
 /* eslint-disable prefer-destructuring */
 const avatar = document.querySelector('.avatar');
@@ -20,8 +21,8 @@ const handleSinglePostDataDOM = (postDataObj) => {
   addedBy.textContent = postDataObj.username;
   avatar.setAttribute('userId', postDataObj.userid);
   addedBy.setAttribute('userId', postDataObj.userid);
-  addedBy.addEventListener('click', () => console.log(addedBy.getAttribute('userId')));
-  avatar.addEventListener('click', () => console.log(avatar.getAttribute('userId')));
+  addedBy.addEventListener('click', () => {window.location.href = `posts/profile/${addedBy.getAttribute('userid')}/view`});
+  avatar.addEventListener('click', () => {window.location.href = `posts/profile/${avatar.getAttribute('userid')}/view`});
   console.log(avatar.getAttribute('userId'));
   timeAdded.textContent = new Date(postDataObj.timeadded).toString().split('GMT')[0];
   content.textContent = postDataObj.content;
@@ -42,54 +43,53 @@ const handleSinglePostDataDOM = (postDataObj) => {
       }));
     })
     .catch(console.log);
-};
-fetch('/isLogged')
-  .then((res) => res.json())
-  .then((res) => {
-    console.log('res in isLogged commments');
-    if (!res.istoken) {
-      console.log('no token and in comment');
-      addCommentBtn.style.display = 'none';
-      CommentInput.style.display = 'none';
-    } else {
+  fetch('/isLogged')
+    .then((res) => res.json())
+    .then((res) => {
+      console.log('res in isLogged commments');
+      if (!res.istoken) {
+        console.log('no token and in comment');
+        addCommentBtn.style.display = 'none';
+        CommentInput.style.display = 'none';
+      } else {
       // eslint-disable-next-line no-shadow
-      const { avatar, username } = res;
-      addCommentBtn.addEventListener('click', () => {
-        if (!CommentInput.value) {
+        const { avatar, username } = res;
+        addCommentBtn.addEventListener('click', () => {
+          if (!CommentInput.value) {
           // eslint-disable-next-line no-undef
-          Swal.fire({
-            title: 'Attention!',
-            text: 'There is no comment to add, please add your comment in field',
-            icon: 'warning',
-            confirmButtonText: 'OK',
-          });
-        } else {
-          fetch('/addComment', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              content: CommentInput.value,
-              userId: res.id,
-              postId,
-            }),
-          }).then((response) => response.json())
-            .then((commentData) => renderComment({
-              commentId: commentData.id,
-              commentContent: commentData.content,
-              commentTimeAdded: commentData.timeadded,
-              commentAvatar: avatar,
-              commentUsername: username,
-              commentUserId: commentData.userid,
-            }));
-          CommentInput.value = '';
-        }
-      });
-    }
-  })
-  .catch(console.error);
-
+            Swal.fire({
+              title: 'Attention!',
+              text: 'There is no comment to add, please add your comment in field',
+              icon: 'warning',
+              confirmButtonText: 'OK',
+            });
+          } else {
+            fetch('/addComment', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                content: CommentInput.value,
+                userId: res.id,
+                postId,
+              }),
+            }).then((response) => response.json())
+              .then((commentData) => renderComment({
+                commentId: commentData.id,
+                commentContent: commentData.content,
+                commentTimeAdded: commentData.timeadded,
+                commentAvatar: avatar,
+                commentUsername: username,
+                commentUserId: commentData.userid,
+              }));
+            CommentInput.value = '';
+          }
+        });
+      }
+    })
+    .catch(console.error);
+};
 const renderComment = (commentDataObj) => {
   console.log('in render comment', commentDataObj);
   const comment = document.createElement('div');
@@ -114,7 +114,7 @@ const renderComment = (commentDataObj) => {
   commentUserInfo.appendChild(commentUsername);
   commentedBy.appendChild(commentUserInfo);
   commentUserInfo.setAttribute('userId', commentDataObj.commentUserId);
-  commentUserInfo.addEventListener('click', () => console.log(commentUserInfo.getAttribute('userId')));
+  commentUserInfo.addEventListener('click', () => {window.location.href = `posts/profile/${commentUserInfo.getAttribute('userid')}/view`});
   commentedBy.appendChild(commentTime);
   comment.appendChild(commentedBy);
   comment.appendChild(commentContent);

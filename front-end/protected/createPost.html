@@ -72,7 +72,11 @@
             placeholder="text content"
             class="text"
           ></textarea>
-          <input type="text" class="imageURL" placeholder="image url" />
+          <div class="addImage">
+            <input type="text" class="imageURL" placeholder="image url" />
+            <button class="previewBtn">Preview image</button>
+          </div>
+          <div class="imagePreview"></div>
         </div>
         <button class="postBtn">Post</button>
         <!-- </div> -->
@@ -81,6 +85,7 @@
     <script src="/JS/search.js"></script>
     <script src="/JS/logout.js"></script>
     <script src="/JS/header.js"></script>
+    <script src="/JS/validation/imageURLValidation.js"></script>
     <script src="/JS/addPost.js"></script>
   </body>
 </html>

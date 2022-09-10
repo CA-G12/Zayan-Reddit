@@ -1,5 +1,5 @@
 const { checkEmailExistance, addUserQuery } = require('./users');
-const { addPostQuery, getPostDataQuery, getAllPostsDataQuery } = require('./posts');
+const { addPostQuery, getPostDataQuery, getAllPostsDataQuery, getProfilepostsQuery } = require('./posts');
 const { addCommentQuery, getPostCommentsQuery } = require('./comments');
 
 module.exports = {
@@ -10,4 +10,5 @@ module.exports = {
   getAllPostsDataQuery,
   addCommentQuery,
   getPostCommentsQuery,
+  getProfilepostsQuery,
 };

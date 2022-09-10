@@ -268,24 +268,23 @@ nav .logo .name {
   align-items: center;
   margin-bottom: 10px;
 }
-.commentsHeader{
+.commentsHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.CommentInputDiv textarea{
+.CommentInputDiv textarea {
   width: 100%;
   padding: 1% 2%;
   border: 1px solid var(--forth-color);
   border-radius: 3px;
-  color:var(--primary-color);
+  color: var(--primary-color);
 }
-.CommentInputDiv textarea:focus{
+.CommentInputDiv textarea:focus {
   outline: none;
   border: 1.5px solid var(--primary-color);
-  
 }
-.addCommentBtn{
+.addCommentBtn {
   background-color: transparent;
   /* border: 1px solid var(--btn2-color); */
   border: 0;
@@ -293,27 +292,27 @@ nav .logo .name {
   color: var(--btn2-color);
   /* padding: 0.5% 2%;  */
 }
-.addCommentBtn:hover{
+.addCommentBtn:hover {
   background-color: var(--cream-color);
   scale: 1.05;
 }
-.comment{
+.comment {
   padding: 1%;
   background-color: var(--cream-color);
   margin-bottom: 10px;
   border-radius: 3px;
 }
-.commentedBy{
+.commentedBy {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.commentUserInfo{
+.commentUserInfo {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.commentAvatar{
+.commentAvatar {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -326,24 +325,26 @@ nav .logo .name {
   border-radius: 50%;
   margin-right: 10px;
 }
-.post .userData .userData2 , .commentUsername{
+.post .userData .userData2,
+.commentUsername {
   color: var(--primary-color);
 }
 .post .userData .userData2 .timeAdded {
-  
   margin-top: -5px;
   color: var(--secondary-color);
 }
-.commentTime{
+.commentTime {
   /* margin-left: 10px; */
   color: var(--btn2-color);
 }
-.commentContent{
+.commentContent {
   margin-top: 0;
   margin-left: 40px;
   color: var(--primary-color);
 }
-.post .name:hover, .post .avatar:hover, .postUsername:hover{
+.post .name:hover,
+.post .avatar:hover,
+.postUsername:hover {
   cursor: pointer;
 }
 .post .content {
@@ -355,7 +356,8 @@ nav .logo .name {
   margin-bottom: 10px;
   align-self: center;
 }
-.post .comments, .commentsLabel {
+.post .comments,
+.commentsLabel {
   width: fit-content;
   border-radius: 3px;
   display: flex;
@@ -451,24 +453,23 @@ nav .logo .name {
   outline: none;
   border-color: var(--primary-color);
 }
-.addImage{
+.addImage {
   display: none;
   align-items: flex-start;
-
 }
-.addImage button{
+.addImage button {
   border: none;
   background-color: var(--forth-color);
   color: var(--btn2-color);
-  padding:6px 7px;
+  padding: 6px 7px;
   border-radius: 5px;
 }
-.imagePreview{
+.imagePreview {
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
 }
-.previewedImage{
+.previewedImage {
   width: max-content;
   height: max-content;
   text-align: center;
@@ -484,4 +485,26 @@ nav .logo .name {
 }
 .postBtn:hover {
   scale: 1.01;
+}
+
+.profileData {
+  display: flex;
+  align-items: center;
+  margin-top: 10vh;
+  background-color: #fffdd0;
+  width: 50%;
+  padding: 1% 2%;
+  border-radius: 5px;
+}
+.profileAvatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.profileUsername{
+  color: black;
+}
+.profilePostsNum{
+  color:var(--btn2-color)
 }

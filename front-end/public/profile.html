@@ -12,9 +12,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="CSS/main.css" />
+    <link rel="stylesheet" href="/CSS/main.css" />
     <title>Zayan Reddit</title>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
   </head>
   <body>
     <header>
@@ -41,7 +41,11 @@
         <div class="dropdown">
           <button class="user">
             <div class="items">
-              <img src="assets/reddit2.png" alt="avatar" class="headerAvatar" />
+              <img
+                src=""
+                alt="avatar"
+                class="headerAvatar"
+              />
               <span class="username">Me</span>
               <i class="fa-solid fa-angle-down"></i>
             </div>
@@ -58,18 +62,24 @@
       </nav>
     </header>
     <section class="container">
-      <div class="createPostSectionHome">
-          <img src="assets/reddit2.png" alt="logo" class="avatar" id = "createPostAvatar"/>
-          <input type="text" class = 'homeInput' placeholder="Create a post">
-          <i class="fa-solid fa-image fa-2x"></i>        
+      <div class="profileData">
+        <img
+          src=""
+          alt="profileAvatar"
+          class="profileAvatar"
+          id="profileAvatar"
+        />
+        <div class="profileData2">
+          <h1 class="profileUsername"></h1>
+          <h3 class="profilePostsNum"></h3>
+        </div>
+      </div>
     </section>
-    <section class="postsSection">
-    
-    </section>
-    <script src="JS/search.js"></script>
-    <script src="JS/logout.js"></script>
-    <script src="JS/header.js"></script>
-    <script src="JS/renderPost.js"></script>
-    <script src="JS/main.js"></script>
+    <section class="postsSection" style="margin-top: 0"></section>
+    <script src="/JS/search.js"></script>
+    <script src="/JS/logout.js"></script>
+    <script src="/JS/header.js"></script>
+    <script src="/JS/renderPost.js"></script>
+    <script src="/JS/profile.js"></script>
   </body>
 </html>

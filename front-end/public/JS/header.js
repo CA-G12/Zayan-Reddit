@@ -8,6 +8,7 @@ const searchBtn = document.querySelector('.searchButton');
 const searchTerm = document.querySelector('.searchTerm');
 // const comments = document.querySelector('.comments');
 const logoutBtn = document.querySelector('.logout');
+const viewProfile = document.querySelector('.viewProfile');
 const headerAvatar = document.querySelector('.headerAvatar');
 const logo = document.querySelector('.logo');
 const createPostAvatar = document.querySelector('#createPostAvatar');
@@ -36,14 +37,19 @@ fetch('/isLogged')
       }
       signInBtn.style.display = 'none';
       signUpBtn.style.display = 'none';
+      viewProfile.setAttribute('userId', res.id);
     }
   })
   .catch(console.error);
 signInBtn.addEventListener('click', () => window.location.assign('/signin.html'));
 signUpBtn.addEventListener('click', () => window.location.assign('/signup.html'));
 searchBtn.addEventListener('click', () => handleSearch(searchTerm.value.trim()));
-// comments.addEventListener('click', () => viewPostPage());
 logoutBtn.addEventListener('click', () => logout());
+viewProfile.addEventListener('click', (e) => {
+  console.log(window.location.pathname);
+  window.location.href = `posts/profile/${e.target.getAttribute('userid')}/view`;
+});
+// window.location.href = `posts/profile/${e.target.getAttribute('userid')}/view`});
 createPost.addEventListener('click', () => { window.location.href = '/createPost'; });
 logo.addEventListener('click', () => window.location.assign('/'));
 if (imageIcon) {

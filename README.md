@@ -4,7 +4,7 @@ Reddit clone web app.
 ## 🚀 Live Link
 
 Read the user journey below to know all features to check.
-[Click to check my project](https://reddit-zayan.herokuapp.com/)
+[Click to check my project](https://reddit-zayan-2.herokuapp.com/)
 
 ## 👤 User journey
 - When the user opens the website from his browser for the first time, he will get the main page of the website which contains all the posts and two buttons for signing in or up at the header.

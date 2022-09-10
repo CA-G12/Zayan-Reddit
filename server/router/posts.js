@@ -11,7 +11,7 @@ router.get('/post/:id/display', viewPost);
 router.get('/post/:id/data', getPostData);
 router.get('/post/:id/comments', getPostComments);
 router.get('/posts', getAllPosts);
-router.get('/posts/profile/:id/view', viewProfilePage);
+router.get('/profile/:id/view', viewProfilePage);
 router.get('/posts/profile/:id', getProfilePosts);
 
 module.exports = router;

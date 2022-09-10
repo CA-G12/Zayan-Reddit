@@ -21,8 +21,8 @@ const handleSinglePostDataDOM = (postDataObj) => {
   addedBy.textContent = postDataObj.username;
   avatar.setAttribute('userId', postDataObj.userid);
   addedBy.setAttribute('userId', postDataObj.userid);
-  addedBy.addEventListener('click', () => {window.location.href = `posts/profile/${addedBy.getAttribute('userid')}/view`});
-  avatar.addEventListener('click', () => {window.location.href = `posts/profile/${avatar.getAttribute('userid')}/view`});
+  addedBy.addEventListener('click', () => {window.location.href = `/profile/${addedBy.getAttribute('userid')}/view`});
+  avatar.addEventListener('click', () => {window.location.href = `/profile/${avatar.getAttribute('userid')}/view`});
   console.log(avatar.getAttribute('userId'));
   timeAdded.textContent = new Date(postDataObj.timeadded).toString().split('GMT')[0];
   content.textContent = postDataObj.content;
@@ -114,7 +114,7 @@ const renderComment = (commentDataObj) => {
   commentUserInfo.appendChild(commentUsername);
   commentedBy.appendChild(commentUserInfo);
   commentUserInfo.setAttribute('userId', commentDataObj.commentUserId);
-  commentUserInfo.addEventListener('click', () => {window.location.href = `posts/profile/${commentUserInfo.getAttribute('userid')}/view`});
+  commentUserInfo.addEventListener('click', () => {window.location.href = `/profile/${commentUserInfo.getAttribute('userid')}/view`});
   commentedBy.appendChild(commentTime);
   comment.appendChild(commentedBy);
   comment.appendChild(commentContent);

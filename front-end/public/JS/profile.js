@@ -2,7 +2,7 @@ const profileAvatar = document.querySelector('#profileAvatar');
 const profileUsername = document.querySelector('.profileUsername');
 const profilePostsNum = document.querySelector('.profilePostsNum');
 
-const userId = window.location.href.split('/')[5];
+const userId = window.location.href.split('/')[4];
 console.log(profileAvatar, profileUsername);
 
 fetch(`/posts/profile/${userId}`)

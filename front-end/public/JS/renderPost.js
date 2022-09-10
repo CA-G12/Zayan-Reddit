@@ -11,7 +11,7 @@ const renderPost = (postDataObj) => {
   userData.appendChild(userAvatar);
   userAvatar.addEventListener('click', () => {
     console.log(userAvatar.getAttribute('userId'));
-    window.location.href = `/posts/profile/${userAvatar.getAttribute('userId')}/view`;
+    window.location.href = `/profile/${userAvatar.getAttribute('userId')}/view`;
   });
   const userData2 = document.createElement('div');
   userData2.className = 'userData2';
@@ -25,7 +25,7 @@ const renderPost = (postDataObj) => {
   userData2.appendChild(name);
   name.addEventListener('click', () => {
     console.log(name.getAttribute('userId'));
-    window.location.href = `/posts/profile/${name.getAttribute('userId')}/view`;
+    window.location.href = `/profile/${name.getAttribute('userId')}/view`;
   });
   userData2.appendChild(postTimeAdded);
   userData.appendChild(userData2);

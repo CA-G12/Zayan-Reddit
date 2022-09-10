@@ -1,6 +1,6 @@
 const { signup, signin, logout } = require('./Authentication');
 const {
-  addPost, viewPost, createPostPage, getPostData, getAllPosts,
+  addPost, viewPost, createPostPage, getPostData, getAllPosts, getProfilePosts, viewProfilePage,
 } = require('./posts');
 const { addComment, getPostComments } = require('./comments');
 
@@ -15,4 +15,6 @@ module.exports = {
   getAllPosts,
   addComment,
   getPostComments,
+  getProfilePosts,
+  viewProfilePage,
 };

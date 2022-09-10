@@ -47,9 +47,9 @@ searchBtn.addEventListener('click', () => handleSearch(searchTerm.value.trim()))
 logoutBtn.addEventListener('click', () => logout());
 viewProfile.addEventListener('click', (e) => {
   console.log(window.location.pathname);
-  window.location.href = `posts/profile/${e.target.getAttribute('userid')}/view`;
+  window.location.href = `/profile/${e.target.getAttribute('userid')}/view`;
 });
-// window.location.href = `posts/profile/${e.target.getAttribute('userid')}/view`});
+// window.location.href = `/profile/${e.target.getAttribute('userid')}/view`});
 createPost.addEventListener('click', () => { window.location.href = '/createPost'; });
 logo.addEventListener('click', () => window.location.assign('/'));
 if (imageIcon) {

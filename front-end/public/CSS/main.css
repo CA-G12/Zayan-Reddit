@@ -491,7 +491,7 @@ nav .logo .name {
   display: flex;
   align-items: center;
   margin-top: 10vh;
-  background-color: #fffdd0;
+  background-image: linear-gradient(to right, var(--cream-color), var(--forth-color));
   width: 50%;
   padding: 1% 2%;
   border-radius: 5px;
@@ -503,8 +503,9 @@ nav .logo .name {
   margin-right: 10px;
 }
 .profileUsername{
-  color: black;
+  color: var(--primary-color);
 }
 .profilePostsNum{
-  color:var(--btn2-color)
+  color:var(--btn2-color);
+
 }

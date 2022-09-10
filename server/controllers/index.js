@@ -3,6 +3,7 @@ const {
   addPost, viewPost, createPostPage, getPostData, getAllPosts, getProfilePosts, viewProfilePage,
 } = require('./posts');
 const { addComment, getPostComments } = require('./comments');
+const {getUserData} = require('./users')
 
 module.exports = {
   signup,
@@ -17,4 +18,5 @@ module.exports = {
   getPostComments,
   getProfilePosts,
   viewProfilePage,
+  getUserData,
 };

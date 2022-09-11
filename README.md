@@ -53,7 +53,7 @@ Read the user journey below to know all features to check.
 1. You can click the code drop-down menu above and copy the link to clone the repo or check the coming step!
 2. I am going to make it easy for you, here is the link https://github.com/CA-G12/Zayan-Reddit.git. In your terminal type the following commands.
 3. `git clone [link]`.
-4. `cd Blog-app-Team8`
+4. `cd Zayan-Reddit`
 5. `npm i` to install the used npm packages.
 6. `npm start` to start your server on the production environment.
 7. `npm run test` to start the tests.

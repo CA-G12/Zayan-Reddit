@@ -1,12 +1,14 @@
 const express = require('express');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
+const favicon = require('serve-favicon');
 const { join } = require('path');
 
 const router = require('./router');
 
 const app = express();
 app.set('port', process.env.PORT || 8000);
+app.use(favicon(join(__dirname, '..', 'front-end', 'public', 'assets', 'favicon.ico')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(compression());
